@@ -1,0 +1,9 @@
+<!-- Version 1 -->
+<!-- <ul>
+  <li *ngFor="let restaurant of restaurants ">{{restaurant.name}}</li>
+</ul> -->
+
+<!-- Version 2 -->
+<ul>
+  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
+</ul>
