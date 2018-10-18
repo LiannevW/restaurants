@@ -1,11 +1,14 @@
 {
   "restaurants": [
-    { "id": 1,
+    {
+      "id": 1,
       "name": "Pizzabakker",
       "location": "Amsterdam",
       "cutlery": 1,
       "site": "www.pizzabakkers.nl"
-     }, { "id": 2,
+     },
+    {
+      "id": 2,
       "name": "Burgers",
       "location": "Amsterdam",
       "cutlery": 1,

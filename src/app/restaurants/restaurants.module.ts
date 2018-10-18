@@ -12,6 +12,9 @@ import { StoreModule } from '@ngrx/store';
 // Custom Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+// Services
+import {RestaurantsService} from '../service/restaurants.service';
+
 // Import services
 @NgModule({
   imports: [
@@ -22,6 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   exports: [
     DashboardComponent
   ],
-  declarations: [DashboardComponent]
+  declarations: [DashboardComponent],
+  providers   : [RestaurantsService]
 })
 export class RestaurantsModule { }

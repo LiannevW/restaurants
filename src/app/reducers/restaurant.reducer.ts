@@ -6,10 +6,10 @@ export const initialState: Restaurant[] = [];
 export function restaurantReducer(state = initialState, action: fromRestaurantActions.All) {
   switch (action.type) {
     case fromRestaurantActions.LOAD_RESTAURANTS: {
+      console.log('LOAD_RESTAURANTS dispatched');
 
       return [
-        console.log('LOAD_RESTAURANTS dispatched'),
-        ...action.payload
+          ...action.payload
       ];
     }
 

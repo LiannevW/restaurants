@@ -11,6 +11,6 @@ export class LoadRestaurants implements Action {
 
   }
 }
-// TODO - add more Actions for editing cities, etc.
+
 export type All =
   LoadRestaurants;

@@ -1,9 +1,10 @@
-<!-- Version 1 -->
-<!-- <ul>
-  <li *ngFor="let restaurant of restaurants ">{{restaurant.name}}</li>
-</ul> -->
+<p>Restaurants</p>
 
-<!-- Version 2 -->
 <ul>
   <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
 </ul>
+<!-- TODO: old version of getRestaurants without redux
+<ul>
+  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
+</ul> -->
+
