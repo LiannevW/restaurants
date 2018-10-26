@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RestaurantsModule } from './restaurants/restaurants.module';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,7 @@ import { RestaurantsModule } from './restaurants/restaurants.module';
   ],
   imports: [
     BrowserModule,
-    RestaurantsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,11 @@
 <p>Restaurants</p>
 
 <ul>
-  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
+  <li *ngFor="let restaurant of restaurants$ | async ">
+    <a [routerLink]="['detail', restaurant.id, restaurant.name]">
+      {{restaurant.name}}
+    </a>
+  </li>
 </ul>
-<!-- TODO: old version of getRestaurants without redux
-<ul>
-  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
-</ul> -->
 
+<app-form></app-form>

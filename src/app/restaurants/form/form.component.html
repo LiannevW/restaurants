@@ -1,0 +1,31 @@
+<h1>Restaurants Toevoegen</h1>
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+  <div>
+      <label>naam</label>
+      <input
+        type="text"
+        formcontrolName="name" >
+  </div>
+  <!-- <div>
+      <label>location</label>
+      <input
+        type="text"
+        formcontrolName="location" >
+  </div>
+  <div>
+      <label>cutlery</label>
+      <input
+        type="number"
+        formcontrolName="cutlery" >
+  </div>
+  <div>
+      <label>site</label>
+      <input
+        type="text"
+        formcontrolName="site" >
+  </div> -->
+  <button type="submit" [disabled]="!restaurantForm.valid">Voeg Restaurant toe!</button>
+</form>
+
+<!-- https://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/
+https://www.techiediaries.com/angular-forms/ -->

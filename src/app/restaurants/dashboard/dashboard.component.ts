@@ -12,8 +12,6 @@ import { AppState } from '../../appState';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-   // TODO: old version of getRestaurants without redux
-  // restaurants$: Observable<Restaurant[]>;
   restaurants$: Observable<Restaurant[]>;
 
   constructor(
@@ -24,14 +22,4 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.restaurants$ = this.store.select(c => c.restaurant);
   }
-
-   // TODO: old version of getRestaurants without redux
-  // getRestaurants() {
-  //   this.restaurants$ = this.restaurantsService.getRestaurants();
-  // }
-
-  // getRestaurants() {
-  //   console.log("in getRestaurants");
-  //   this.restaurantsService.loadRestaurants();
-  // }
 }

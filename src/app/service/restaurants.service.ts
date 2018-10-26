@@ -23,17 +23,6 @@ export class RestaurantsService {
     this.loadRestaurants();
   }
 
-  // TODO: old version of getRestaurants without redux
-  // getRestaurants(): Observable<Restaurant[]> {
-  //     return this.http.get<Restaurant[]>(BASE_URL)
-  //     .pipe(
-  //       catchError(err => {
-  //         console.log('FOUT', err);
-  //         return of(null);
-  //       })
-  //     );
-  // }
-
   loadRestaurants() {
     return this.http.get(BASE_URL, HEADERS).pipe(
           tap(res => console.log('just received', res)),
