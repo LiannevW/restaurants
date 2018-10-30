@@ -32,4 +32,14 @@ export class RestaurantsService {
           () => console.log('Getting restaurants complete'));
   }
 
+  addRestaurant(restaurant: Restaurant) {
+    console.log(' in add restaurant, wat is mijn restaurant?', restaurant);
+    return this.http.post(BASE_URL, restaurant, HEADERS).pipe(
+      tap(res => console.log('just received response after post of one restaurant', res)),
+  )
+      .subscribe((restaurant: Restaurant) => this.store.dispatch(new fromRestaurantActions.AddRestaurant(restaurant)),
+      err => console.log('Error: did you forget to start json-server on localhost: 3000? (use "npm run json-server")'),
+      () => console.log('Getting restaurants complete after posting one restaurant'));
+  }
+
 }

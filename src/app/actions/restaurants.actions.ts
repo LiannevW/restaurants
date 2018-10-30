@@ -3,7 +3,7 @@ import { Restaurant } from '../models/restaurant';
 
 // *** Action Constants.
 export const LOAD_RESTAURANTS = '[RESTAURANTS] - Load Restaurants';
-export const LOAD_RESTAURANT = '[RESTAURANTS] - Load One Restaurant';
+export const ADD_RESTAURANT = '[RESTAURANTS] - Add Restaurant';
 
 // *** Action Creators.
 export class LoadRestaurants implements Action {
@@ -13,12 +13,12 @@ export class LoadRestaurants implements Action {
   }
 }
 
-export class LoadRestaurant implements Action {
-  readonly type = LOAD_RESTAURANT;
+export class AddRestaurant implements Action {
+  readonly type = ADD_RESTAURANT;
   constructor(public payload?: Restaurant) {
   }
 }
 
 export type All =
   LoadRestaurants |
-  LoadRestaurant;
+  AddRestaurant;

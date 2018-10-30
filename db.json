@@ -6,13 +6,44 @@
       "location": "Amsterdam",
       "cutlery": 1,
       "site": "www.pizzabakkers.nl"
-     },
+    },
     {
       "id": 2,
       "name": "Burgers",
       "location": "Amsterdam",
       "cutlery": 1,
       "site": "www.burgers.nl"
-     }
+    },
+    {
+      "name": "Pannenkoekenboot",
+      "location": "Amsterdam",
+      "cutlery": 3,
+      "site": "www.iets?.nl",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "name": "QWERTY",
+      "location": "q",
+      "cutlery": 1,
+      "site": "asdfsadf",
+      "id": 5
+    },
+    {
+      "name": "nieuwrestaurant",
+      "location": "Zwolle",
+      "cutlery": 1,
+      "site": "x",
+      "id": 6
+    },
+    {
+      "name": "Liannes kaas",
+      "location": "Bilthoven",
+      "cutlery": 2,
+      "site": "geen",
+      "id": 7
+    }
   ]
 }
