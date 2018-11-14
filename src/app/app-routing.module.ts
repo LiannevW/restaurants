@@ -5,7 +5,7 @@ import {ExtraOptions, PreloadAllModules, RouterModule, Routes} from '@angular/ro
 const routes: Routes = [
   {path: '', redirectTo: 'restaurants', pathMatch: 'full'},
   {path: 'restaurants', loadChildren: './restaurants/restaurants.module#RestaurantsModule'},
-  {path: 'top7', loadChildren: './winners/winners.module#WinnersModule'},
+  {path: 'top7', loadChildren: './winners/winners.module#WinnersModule'}
 ];
 
 const config: ExtraOptions    = {

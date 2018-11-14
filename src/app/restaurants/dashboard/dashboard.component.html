@@ -1,16 +1,14 @@
-<p>Restaurants</p>
 <div class='dashboard__block'>
   <ul class='dashboard__list'>
     <li class='dashboard__item' *ngFor="let restaurant of restaurants$ | async ">
       <a [routerLink]="['detail', restaurant.id, restaurant.name]">
-        {{restaurant.name}}
-        {{restaurant.image}}
-        {{restaurant.location}}
-        {{restaurant.cultery}}
+        <div class="dashboard__content">
+          {{restaurant.name}}
+          <!-- {{restaurant.location}}
+          {{restaurant.cultery}} -->
+        </div>
+        <img class="dashboard__image" [src]="restaurant.image"/>
       </a>
     </li>
   </ul>
 </div>
-
-
-<app-form></app-form>

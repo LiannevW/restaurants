@@ -21,7 +21,8 @@ import { FormComponent } from './form/form.component';
 // link is --> /restaurants
 const restaurantsRoutes: Routes = [
   {path: '', component: DashboardComponent},
-  {path: 'detail/:id/:name', component: DetailsComponent}
+  {path: 'detail/:id/:name', component: DetailsComponent},
+  {path: 'voeg-restaurant-toe', component: FormComponent}
 ];
 
 @NgModule({

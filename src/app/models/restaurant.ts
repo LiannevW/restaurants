@@ -6,5 +6,5 @@ export interface Restaurant {
   location?: string;
   cutlery?: number;
   site?: Url;
-  image: Url;
+  image?: Url;
 }

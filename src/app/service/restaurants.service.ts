@@ -20,10 +20,10 @@ export class RestaurantsService {
 
   constructor(private http: HttpClient,
               private store: Store<AppState>) {
-    this.loadRestaurants();
   }
 
   loadRestaurants() {
+    console.log('in loadrestaurants');
     return this.http.get(BASE_URL, HEADERS).pipe(
           tap(res => console.log('just received', res)),
       )
