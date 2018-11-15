@@ -1,10 +1,12 @@
-<p>Restaurants</p>
-
-<ul>
-  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
-</ul>
-<!-- TODO: old version of getRestaurants without redux
-<ul>
-  <li *ngFor="let restaurant of restaurants$ | async ">{{restaurant.name}}</li>
-</ul> -->
-
+<div class='dashboard__block'>
+  <ul class='dashboard__list'>
+    <li class='dashboard__item' *ngFor="let restaurant of restaurants$ | async ">
+      <a [routerLink]="['detail', restaurant.id, restaurant.name]">
+        <div class="dashboard__content">
+          {{restaurant.name}}
+        </div>
+        <img class="dashboard__image" [src]="restaurant.image"/>
+      </a>
+    </li>
+  </ul>
+</div>

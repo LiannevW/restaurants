@@ -13,6 +13,13 @@ export function restaurantReducer(state = initialState, action: fromRestaurantAc
       ];
     }
 
+    case fromRestaurantActions.ADD_RESTAURANT: {
+
+      return [
+        ...state, action.payload
+      ];
+    }
+
     default: {
 		  return state;
     }
