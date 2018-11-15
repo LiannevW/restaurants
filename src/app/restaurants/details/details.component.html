@@ -1,11 +1,9 @@
-<p>
-  terug link maken naar homepage
-</p>
+<a href='/'>vorige</a>
 
-<p>
-
-  {{selectedRestaurant.name}}
-  {{selectedRestaurant.location}}
-  {{selectedRestaurant.cutlery}}
-  <!-- {{ (restaurant$ | async)?.name}} -->
-</p>
+<div class="details-block">
+  <h3 class="details-block__title">{{selectedRestaurant?.name}}</h3>
+  <img class="details-block__image" [src]="selectedRestaurant?.image"/>
+  <p>Locatie:{{selectedRestaurant?.location}}</p>
+  <p>Site:{{selectedRestaurant?.site}}</p>
+  <p>Bestek:{{selectedRestaurant?.cutlery}}</p>
+</div>
