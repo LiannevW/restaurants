@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
     private store: Store<AppState>,
     private restaurantsService: RestaurantsService
   ) {
+    console.log('welkom in l\'masden');
     this.restaurantsService.loadRestaurants();
    }
 
