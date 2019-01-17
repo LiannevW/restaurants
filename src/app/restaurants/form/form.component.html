@@ -1,34 +1,45 @@
 <h1>Restaurants Toevoegen</h1>
-<form [formGroup]="restaurantForm" (ngSubmit)="onSubmitRestaurantForm()">
-  <div>
-      <label>naam</label>
+<form class='restaurant-form' [formGroup]="restaurantForm" (ngSubmit)="onSubmitRestaurantForm()">
+  <div class='restaurant-form__key-value-pair'>
+      <label>Restaurant naam:</label>
       <input
         type="text"
-        formControlName="name" >
+        formControlName="name"
+        class='restaurant-form__input'
+        placeholder='Grand café Le Connaisseur ;)'>
   </div>
-  <div>
-      <label>location</label>
+  <div class='restaurant-form__key-value-pair'>
+      <label>Plaats:</label>
       <input
         type="text"
-        formControlName="location" >
+        formControlName="location"
+        class='restaurant-form__input'
+        placeholder='De Bilt'>
   </div>
-  <div>
-      <label>cutlery</label>
+  <div class='restaurant-form__key-value-pair'>
+      <label>Bestekjes:</label>
       <input
         type="number"
-        formControlName="cutlery" >
+        formControlName="cutlery"
+        class='restaurant-form__input'
+        placeholder='1'>
   </div>
-  <div>
-      <label>site</label>
+  <div class='restaurant-form__key-value-pair'>
+      <label>Website:</label>
       <input
         type="text"
-        formControlName="site" >
+        formControlName="site"
+        class='restaurant-form__input'
+        placeholder='www.restaurant.nl'>
   </div>
-  <div>
-    <label>image</label>
+  <div class='restaurant-form__key-value-pair'>
+    <label>Afbeelding</label>
     <input
       type="url"
-      formControlName="image" >
+      formControlName="image"
+      class='restaurant-form__input'
+      placeholder='plaatje.nl'>
 </div>
-  <button type="submit" [disabled]="!restaurantForm.valid">Voeg Restaurant toe!</button>
+  <button class='restaurant-form__button' type="submit" [disabled]="!restaurantForm.valid">Voeg Restaurant toe!</button>
 </form>
+
