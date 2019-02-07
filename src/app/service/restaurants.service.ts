@@ -22,14 +22,10 @@ export class RestaurantsService {
               private store: Store<AppState>) {
   }
 
-  loadRestaurants() {
-    console.log('in loadrestaurants');
+  loadRestaurantsViaEffect() {
     return this.http.get(BASE_URL, HEADERS).pipe(
           tap(res => console.log('just received', res)),
-      )
-          .subscribe((restaurants: Restaurant[]) => this.store.dispatch(new fromRestaurantActions.LoadRestaurants(restaurants)),
-          err => console.log('Error: did you forget to start json-server on localhost: 3000? (use "npm run json-server")'),
-          () => console.log('Getting restaurants complete'));
+    );
   }
 
   addRestaurant(restaurant: Restaurant) {
@@ -43,3 +39,4 @@ export class RestaurantsService {
   }
 
 }
+

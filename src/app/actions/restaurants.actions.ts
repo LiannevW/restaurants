@@ -3,14 +3,18 @@ import { Restaurant } from '../models/restaurant';
 
 // *** Action Constants.
 export const LOAD_RESTAURANTS = '[RESTAURANTS] - Load Restaurants';
+export const LOAD_RESTAURANTS_EFFECT = '[RESTAURANTS] - Load Restaurants via Effect';
+export const LOAD_RESTAURANTS_COMPLETE = '[RESTAURANTS] - Load Restaurants via Effect Complete';
 export const ADD_RESTAURANT = '[RESTAURANTS] - Add Restaurant';
 
 // *** Action Creators.
-export class LoadRestaurants implements Action {
-  readonly type = LOAD_RESTAURANTS;
-  constructor(public payload?: Restaurant[]) {
+export class LoadRestaurantsViaEffect implements Action {
+  public readonly type = LOAD_RESTAURANTS_EFFECT;
+}
 
-  }
+export class LoadRestaurantsViaEffectComplete implements Action {
+  readonly type = LOAD_RESTAURANTS_COMPLETE;
+  constructor(public payload: Restaurant[]) {}
 }
 
 export class AddRestaurant implements Action {
@@ -20,5 +24,7 @@ export class AddRestaurant implements Action {
 }
 
 export type All =
-  LoadRestaurants |
+  // LoadRestaurants |
+  LoadRestaurantsViaEffect |
+  LoadRestaurantsViaEffectComplete |
   AddRestaurant;

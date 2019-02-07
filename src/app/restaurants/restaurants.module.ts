@@ -18,6 +18,11 @@ import { StoreModule } from '@ngrx/store';
 import { restaurantReducer } from '../reducers/restaurant.reducer';
 import { FormComponent } from './form/form.component';
 
+// Effects
+import {EffectsModule} from '@ngrx/effects';
+import { RestaurantsEffects } from '../effects/restaurantsEffects';
+// import { RestaurantsEffects } from '../effects/restaurantsEffects';
+
 // link is --> /restaurants
 const restaurantsRoutes: Routes = [
   {path: '', component: DashboardComponent},
@@ -33,7 +38,8 @@ const restaurantsRoutes: Routes = [
     RouterModule.forChild(restaurantsRoutes),
     ReactiveFormsModule,
     StoreDevtoolsModule.instrument({
-      maxAge: 10})
+      maxAge: 10}),
+      EffectsModule.forRoot([RestaurantsEffects])
   ],
   exports: [
     DashboardComponent

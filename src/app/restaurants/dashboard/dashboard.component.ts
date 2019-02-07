@@ -5,6 +5,8 @@ import { Store } from '@ngrx/store';
 import { async } from 'rxjs/internal/scheduler/async';
 import { AppState } from '../../appState';
 import { RestaurantsService } from '../../service/restaurants.service';
+import * as fromRestaurantActions from '../../actions/restaurants.actions';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -16,10 +18,9 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private store: Store<AppState>,
-    private restaurantsService: RestaurantsService
+    private restaurantsService: RestaurantsService,
   ) {
-    console.log('welkom in l\'masden');
-    this.restaurantsService.loadRestaurants();
+    this.store.dispatch(new fromRestaurantActions.LoadRestaurantsViaEffect());
    }
 
   ngOnInit() {
