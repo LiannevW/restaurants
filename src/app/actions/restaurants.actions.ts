@@ -14,7 +14,8 @@ export class LoadRestaurantsViaEffect implements Action {
 
 export class LoadRestaurantsViaEffectComplete implements Action {
   readonly type = LOAD_RESTAURANTS_COMPLETE;
-  constructor(public payload: Restaurant[]) {}
+  constructor(public payload: Restaurant[]) {
+  }
 }
 
 export class AddRestaurant implements Action {
@@ -24,7 +25,6 @@ export class AddRestaurant implements Action {
 }
 
 export type All =
-  // LoadRestaurants |
   LoadRestaurantsViaEffect |
   LoadRestaurantsViaEffectComplete |
   AddRestaurant;
