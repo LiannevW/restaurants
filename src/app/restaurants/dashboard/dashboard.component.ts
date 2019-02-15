@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Restaurant } from '../../models/restaurant';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { async } from 'rxjs/internal/scheduler/async';
 import { AppState } from '../../appState';
-import { RestaurantsService } from '../../service/restaurants.service';
 import * as fromRestaurantActions from '../../actions/restaurants.actions';
 
 
@@ -18,7 +16,6 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private store: Store<AppState>,
-    private restaurantsService: RestaurantsService,
   ) {
     this.store.dispatch(new fromRestaurantActions.LoadRestaurantsViaEffect());
    }

@@ -18,12 +18,9 @@ export class RestaurantsEffects {
   loadRestaurants$ = this.actions$.pipe(
     ofType(restaurantActions.LOAD_RESTAURANTS_EFFECT),
     switchMap(() =>
-      // call the service
       this.restaurantsService.loadRestaurantsViaEffect()
         .pipe(
-          // return a Success action when everything went OK
           map((restaurants: Restaurant[]) => new restaurantActions.LoadRestaurantsViaEffectComplete(restaurants)),
-          // return a Failed action when something went wrong
           catchError(err => {
             console.log(err);
             throw err;

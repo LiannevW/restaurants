@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Restaurant } from '../models/restaurant';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable } from 'rxjs';
 import {tap} from 'rxjs/operators';
-import {catchError, finalize, map} from 'rxjs/operators';
-import {of} from 'rxjs';
 import * as fromRestaurantActions from '../actions/restaurants.actions';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { environment } from '../../environments/environment';
+import {map} from 'rxjs/operators';
+
 
 import {AppState} from '../appState';
 import {Store} from '@ngrx/store';
@@ -19,13 +20,19 @@ const HEADERS  = {headers: new HttpHeaders().set('Content-Type', 'application/js
 export class RestaurantsService {
 
   constructor(private http: HttpClient,
-              private store: Store<AppState>) {
+              private store: Store<AppState>,
+              private afs: AngularFirestore) {
   }
 
   loadRestaurantsViaEffect() {
-    return this.http.get(BASE_URL, HEADERS).pipe(
-          tap(res => console.log('just received', res)),
-    );
+    const restaurantsCollection$ = this.afs.collection(environment.restaurants_endpoint);
+    return restaurantsCollection$.snapshotChanges().pipe(
+        map(restaurants => {
+          return restaurants.map(restaurant => {
+            return restaurant.payload.doc.data();
+          });
+        })
+      );
   }
 
   addRestaurant(restaurant: Restaurant) {
