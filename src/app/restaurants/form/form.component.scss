@@ -26,4 +26,15 @@
     margin-top: 10px;
     padding: 0;
   }
+
+  &__confirmation {
+    &.is-hidden {
+      display: none;
+    }
+
+    &.is-visible {
+      display: block;
+      color: green;
+    }
+  }
 }
