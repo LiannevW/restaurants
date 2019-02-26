@@ -24,37 +24,23 @@ export class DetailsComponent implements OnInit {
     private store: Store<AppState>
   ) {
     this.restaurant$ = this.store.select('restaurant');
+    console.log('in details', this.restaurant$);
   }
 
   ngOnInit() {
     this.route.params.subscribe((params: { id: string }) => {
       this.idInUrl = Number(params.id);
+      console.log('this is id in url');
     });
 
-    this.restaurant$.subscribe(restaurant => {
-      restaurant.forEach(restaurant => {
-        if (restaurant.id === this.idInUrl) {
-          this.selectedRestaurant = restaurant;
-        }
-      });
-    });
+    // this.restaurant$.subscribe(restaurant => {
+    //   restaurant.forEach(restaurant => {
+    //     if (restaurant.id === this.idInUrl) {
+    //       this.selectedRestaurant = restaurant;
+    //     }
+    //   });
+    // });
 
   }
 
 }
-
-
-
-// this.restaurant$.subscribe(restaurant => {
-//   this.restaurant = restaurant;
-// });
-
-// this.restaurant.forEach(restaurant => {
-//   if (restaurant.id === 1) {
-//     this.selectedRestaurant = restaurant;
-//   }
-// });
-
-// this.route.params.subscribe((params: { id: string }) => {
-//   this.id = Number(params.id);
-// });
