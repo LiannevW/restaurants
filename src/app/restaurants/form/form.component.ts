@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 
 import { Restaurant } from '../../models/restaurant';
 import { RestaurantsService } from '../../service/restaurants.service';
-import * as fromRestaurantActions from '../../actions/restaurants.actions';
+import * as fromRestaurantActions from '../../store/actions/restaurants.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../appState';
 

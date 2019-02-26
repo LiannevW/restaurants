@@ -1,5 +1,5 @@
 import * as fromRestaurantActions from '../actions/restaurants.actions';
-import { Restaurant } from '../models/restaurant';
+import { Restaurant } from '../../models/restaurant';
 
 export const initialState: Restaurant[] = [];
 

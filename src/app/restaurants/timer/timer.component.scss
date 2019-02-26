@@ -1,0 +1,43 @@
+@import '../../../assets/layout/layout.component.scss';
+
+.timer {
+  &__list {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: inline-block;
+    background-color: black;
+    margin: 0 5px;
+    font-family: $Montserrat;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+
+    &:last-of-type{
+      display: none;
+
+      @media only screen and (min-width: $breakpoint-desktop) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__span {
+    display: block;
+    font-size: 50px;
+  }
+}
+
+.timer__img {
+  border: 1px solid black;
+  height: 600px;
+  background-image: url("../../../assets/images/lmasden.JPG");
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    background-image: url("../../../assets/images/beach2.JPG");
+  }
+}

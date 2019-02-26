@@ -3,7 +3,7 @@ import { Restaurant } from '../../models/restaurant';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../appState';
-import * as fromRestaurantActions from '../../actions/restaurants.actions';
+import * as fromRestaurantActions from '../../store/actions/restaurants.actions';
 
 
 @Component({

@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { HttpClient } from '@angular/common/http';
 import * as restaurantActions from '../actions/restaurants.actions';
-import { RestaurantsService } from '../service/restaurants.service';
+import { RestaurantsService } from '../../service/restaurants.service';
 import {map, switchMap, catchError, tap, mergeMap} from 'rxjs/operators';
-import {Restaurant} from '../models/restaurant';
+import {Restaurant} from '../../models/restaurant';
 
 @Injectable()
 export class RestaurantsEffects {

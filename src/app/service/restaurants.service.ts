@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Restaurant } from '../models/restaurant';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {tap} from 'rxjs/operators';
-import * as fromRestaurantActions from '../actions/restaurants.actions';
+import * as fromRestaurantActions from '../store/actions/restaurants.actions';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { environment } from '../../environments/environment';
 import {map} from 'rxjs/operators';
