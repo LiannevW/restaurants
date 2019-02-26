@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Restaurant } from '../models/restaurant';
+import { Restaurant } from '../../models/restaurant';
 
 // *** Action Constants.
 export const LOAD_RESTAURANTS_EFFECT = '[RESTAURANTS] - Load Restaurants via Effect';

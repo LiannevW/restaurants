@@ -1,11 +1,6 @@
-// @mixin breakpoint($breakpoint) {
-//   @media only screen and (min-width: #{$breakpoint}) {
-//       @content;
-//   }
-// }
+@import '../../../assets/layout/layout.component.scss';
 
 .dashboard {
-
   &__list {
     padding-left: 0;
     list-style: none;

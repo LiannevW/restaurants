@@ -1,12 +1,16 @@
 <div class="header">
-  <div class="header__mobile-menu" toggle-link>Menu</div>
-  <div class="header__title">
-    <a routerLink="restaurants">L'MASDEN</a>
+  <div class="header__link">
+    <div class="header__link--mobile-menu" toggle-link>
+      <img src="../../assets/icons/hamburger.svg" alt="Menu">
+    </div>
+    <div class="header__link--title">
+      <a class= header__link--link routerLink="restaurants">L'MASDEN</a>
+    </div>
   </div>
-</div>
 
-<div class='menu' togge-target>
-  <button class='menu__item' routerLink="restaurants">Overzicht</button>
-  <button class='menu__item' routerLink="restaurants/voeg-restaurant-toe">Voeg restaurant toe</button>
-  <button class='menu__item' routerLink="top7">Crème de la crème</button>
+  <div class='header__menu' togge-target>
+    <button class='header__menu__item' routerLink="restaurants/restaurants">Restaurants</button>
+    <button class='header__menu__item' routerLink="restaurants/voeg-restaurant-toe">Add restaurant</button>
+    <button class='header__menu__item' routerLink="top7">Crème de la crème</button>
+  </div>
 </div>
